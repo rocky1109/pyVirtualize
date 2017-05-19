@@ -1,0 +1,1632 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to pyVirtualize’s documentation! &mdash; pyVirtualize alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pyVirtualize alpha documentation" href="#"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> pyVirtualize
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to pyVirtualize&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a><ul>
+<li><a class="reference internal" href="#pyvirtualize">pyVirtualize</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#virtualmachine-class"><strong>VirtualMachine</strong> class</a><ul>
+<li><a class="reference internal" href="#virtualmachines-operations">VirtualMachines Operations</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">pyVirtualize</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to pyVirtualize&#8217;s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-pyvirtualize-s-documentation">
+<h1>Welcome to pyVirtualize&#8217;s documentation!<a class="headerlink" href="#welcome-to-pyvirtualize-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+<span class="target" id="module-pyVirtualize"></span><div class="section" id="pyvirtualize">
+<h2>pyVirtualize<a class="headerlink" href="#pyvirtualize" title="Permalink to this headline">¶</a></h2>
+<p>pyVirtualize is build over pyVmomi, hence it has ability to perform all the operations what vSphere client is able to.
+Not only vSphere, but pyVirtualize provides an interface for VMware Horizon View session management.</p>
+<p>pyVirtualize provides easy interfaces to:</p>
+<ul class="simple">
+<li>Connect to VMWare&#8217;s ESX, ESXi, Virtual Center, Virtual Server hosts and View Connnection server.</li>
+<li>Query hosts, datacenters, resource pools, virtual machines and perform various operations over them.</li>
+<li>VMs operations: power, file, process, snapshot, admin, utilities</li>
+<li>Horizon View: desktop, farms, rdsh, -pool management, querying connection and more.</li>
+</ul>
+<p>An of course, you can use it to access all the API through python.</p>
+<dl class="class">
+<dt id="pyVirtualize.vSphere">
+<em class="property">class </em><code class="descclassname">pyVirtualize.</code><code class="descname">vSphere</code><span class="sig-paren">(</span><em>address</em>, <em>username='root'</em>, <em>password='ca$hc0w'</em>, <em>port=443</em>, <em>sslContext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.vSphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyVirtualize.utils.klasses.PersistableClass</span></code></p>
+<p>Just like vSphere client, this class helps to access the vCenter Server and ultimately manages ESXi servers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>address</strong> &#8211; (str)
+Server address of the ESXi / vCenter host.</li>
+<li><strong>username</strong> &#8211; (str)
+Username to login with. [default = root]</li>
+<li><strong>password</strong> &#8211; (str)
+Password to login with. [default = ca$hc0w]</li>
+<li><strong>port</strong> &#8211; (int) 
+Port on which object should connect to host. [default = 443]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><strong>Example</strong></div>
+<div class="line">&gt;&gt; from pyVirtualize.pyvSphere import vSphere</div>
+<div class="line">&gt;&gt; vsphere = vSphere(address=&#8216;10.112.67.60&#8217;, <a class="reference external" href="mailto:username='administrator&#37;&#52;&#48;vsphere&#46;local">username='administrator<span>&#64;</span>vsphere<span>&#46;</span>local</a>&#8216;, password=&#8217;Ca$hc0w1&#8217;)</div>
+<div class="line">&gt;&gt; vsphere.login()</div>
+<div class="line">&gt;&gt;</div>
+<div class="line">&gt;&gt; vsphere.Datacenters</div>
+<div class="line">{&#8216;datacenter1&#8217;: &#8216;vim.Datacenter:datacenter-2&#8217;, &#8216;datacenter2&#8217;: &#8216;vim.Datacenter:datacenter-7&#8217;}</div>
+<div class="line">&gt;&gt;</div>
+<div class="line">&gt;&gt; vsphere.VirtualMachines</div>
+<div class="line">{&#8216;W7x64&#8217;: &#8216;VirtualMachine:vm-295&#8217;, &#8216;W7x32&#8217;: &#8216;vim.VirtualMachine:vm-183&#8217;, ... }</div>
+</div>
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.Clusters">
+<code class="descname">Clusters</code><a class="headerlink" href="#pyVirtualize.vSphere.Clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of Clusters objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary object with key, value pair or Cluster name and Cluster object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.ComputeResources">
+<code class="descname">ComputeResources</code><a class="headerlink" href="#pyVirtualize.vSphere.ComputeResources" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.Datacenters">
+<code class="descname">Datacenters</code><a class="headerlink" href="#pyVirtualize.vSphere.Datacenters" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of Datacenter objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary object with key, value pair or Datacenter name and Datacenter object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.Datastores">
+<code class="descname">Datastores</code><a class="headerlink" href="#pyVirtualize.vSphere.Datastores" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of Datastore objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary object with key, value pair or Datastore name and Datastore object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.Folders">
+<code class="descname">Folders</code><a class="headerlink" href="#pyVirtualize.vSphere.Folders" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.Hosts">
+<code class="descname">Hosts</code><a class="headerlink" href="#pyVirtualize.vSphere.Hosts" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of Host objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary object with key, value pair or Host name and Host object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.Networks">
+<code class="descname">Networks</code><a class="headerlink" href="#pyVirtualize.vSphere.Networks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.ResourcePools">
+<code class="descname">ResourcePools</code><a class="headerlink" href="#pyVirtualize.vSphere.ResourcePools" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.VirtualMachines">
+<code class="descname">VirtualMachines</code><a class="headerlink" href="#pyVirtualize.vSphere.VirtualMachines" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of VirtualMachines objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary object with key, value pair or VirtualMachine name and VirtualMachine object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.about">
+<code class="descname">about</code><a class="headerlink" href="#pyVirtualize.vSphere.about" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><em>vim.AboutInfo</em>, vmomi info object.</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">(vim.AboutInfo) {</div>
+<div class="line-block">
+<div class="line">dynamicType = &lt;unset&gt;,</div>
+<div class="line">dynamicProperty = (vmodl.DynamicProperty) [],</div>
+<div class="line">name = &#8216;VMware vCenter Server&#8217;,</div>
+<div class="line">fullName = &#8216;VMware vCenter Server 6.0.0 build-3634794&#8217;,</div>
+<div class="line">vendor = &#8216;VMware, Inc.&#8217;,</div>
+<div class="line">version = &#8216;6.0.0&#8217;,</div>
+<div class="line">build = &#8216;3634794&#8217;,</div>
+<div class="line">localeVersion = &#8216;INTL&#8217;,</div>
+<div class="line">localeBuild = &#8216;000&#8217;,</div>
+<div class="line">osType = &#8216;linux-x64&#8217;,</div>
+<div class="line">productLineId = &#8216;vpx&#8217;,</div>
+<div class="line">apiType = &#8216;VirtualCenter&#8217;,</div>
+<div class="line">apiVersion = &#8216;6.0&#8217;,</div>
+<div class="line">instanceUuid = &#8216;3c6c809d-eb71-4a4b-bd9d-23ca07928f51&#8217;,</div>
+<div class="line">licenseProductName = &#8216;VMware VirtualCenter Server&#8217;,</div>
+<div class="line">licenseProductVersion = &#8216;6.0&#8217;</div>
+</div>
+<div class="line">}</div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.apiType">
+<code class="descname">apiType</code><a class="headerlink" href="#pyVirtualize.vSphere.apiType" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(str)
+API Type of the specified server.  VirtualCenter/ESXi</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.vSphere.create_new_datacenter">
+<code class="descname">create_new_datacenter</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.vSphere.create_new_datacenter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.vSphere.create_new_folder">
+<code class="descname">create_new_folder</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.vSphere.create_new_folder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.vSphere.load">
+<code class="descname">load</code><span class="sig-paren">(</span><em>cls_file</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.vSphere.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.vSphere.login">
+<code class="descname">login</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.vSphere.login" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the most preferred API version supported by the specified VCenter server,
+then connect to the specified server using that API version, and logs into it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.vSphere.logout">
+<code class="descname">logout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.vSphere.logout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs out from the specified VCenter server.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.vSphere.rescan_virtual_machines">
+<code class="descname">rescan_virtual_machines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.vSphere.rescan_virtual_machines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refreshes the <em>VirtualMachines</em> list associated to server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.vSphere.service_instance">
+<code class="descname">service_instance</code><a class="headerlink" href="#pyVirtualize.vSphere.service_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>VMOMI ServiceInstance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.vSphere.store">
+<code class="descname">store</code><span class="sig-paren">(</span><em>cls_file</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.vSphere.store" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyVirtualize.Process">
+<em class="property">class </em><code class="descclassname">pyVirtualize.</code><code class="descname">Process</code><a class="headerlink" href="#pyVirtualize.Process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Utility to launch new processes</p>
+<dl class="staticmethod">
+<dt id="pyVirtualize.Process.start_process">
+<em class="property">static </em><code class="descname">start_process</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.Process.start_process" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyVirtualize.WinUtils">
+<em class="property">class </em><code class="descclassname">pyVirtualize.</code><code class="descname">WinUtils</code><a class="headerlink" href="#pyVirtualize.WinUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Utilities to work with Windows OS</p>
+<dl class="staticmethod">
+<dt id="pyVirtualize.WinUtils.del_map_drive">
+<em class="property">static </em><code class="descname">del_map_drive</code><span class="sig-paren">(</span><em>net_share</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.WinUtils.del_map_drive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the given network share
+:param net_share:
+:return:</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pyVirtualize.WinUtils.map_drive">
+<em class="property">static </em><code class="descname">map_drive</code><span class="sig-paren">(</span><em>user</em>, <em>password</em>, <em>net_share</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.WinUtils.map_drive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map given network share
+:param user:
+:param password:
+:param net_share:
+:return:</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pyVirtualize.WinUtils.read_reg">
+<em class="property">static </em><code class="descname">read_reg</code><span class="sig-paren">(</span><em>reg_key</em>, <em>reg_val</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.WinUtils.read_reg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch registry given the reg key+value combo
+:param reg_key:
+:param reg_val:
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="virtualmachine-class">
+<h1><strong>VirtualMachine</strong> class<a class="headerlink" href="#virtualmachine-class" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pyVirtualize.pyvSphere.vm.VirtualMachine">
+<em class="property">class </em><code class="descclassname">pyVirtualize.pyvSphere.vm.</code><code class="descname">VirtualMachine</code><span class="sig-paren">(</span><em>vmomi_obj</em>, <em>service_instance</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.VirtualMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyVirtualize.pyvSphere.vm.VirtualMachine.operations">
+<code class="descname">operations</code><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.VirtualMachine.operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of operations supported over Virtual machine.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.VirtualMachine.set_credentials">
+<code class="descname">set_credentials</code><span class="sig-paren">(</span><em>username</em>, <em>password</em>, <em>credentials_type</em>, <em>default=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.VirtualMachine.set_credentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the credentials for the Guest operations on this virtual machine.
+:param username: (str) Guest username. ex: domain_nameuser_name
+:param password: (str) Guest password.
+:param credentials_type: (any immutable) A dictionary key which helps to different credentials for the system. 
+:param default: (bool) If specified then for all the guest operation these credentials will be used by default.</p>
+<blockquote>
+<div>Unless with the operation one specifies the <em>credential_type</em> with it.</div></blockquote>
+<div class="line-block">
+<div class="line"><strong>Examples</strong></div>
+<div class="line">&gt;&gt; vm.set_credentials(username=&#8221;myDomaindomainUser&#8221;, password=&#8221;secret&#8221;, credentials_type=&#8221;user&#8221;, default=True)</div>
+<div class="line">&gt;&gt; vm.set_credentials(username=&#8221;myDomaindomainAdmin&#8221;, password=&#8221;secret&#8221;, credentials_type=&#8221;admin&#8221;)</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyVirtualize.pyvSphere.vm._base.Details">
+<em class="property">class </em><code class="descclassname">pyVirtualize.pyvSphere.vm._base.</code><code class="descname">Details</code><span class="sig-paren">(</span><em>vobj</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm._base.Details" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pyVirtualize.pyvSphere.vm._base.Details.config">
+<code class="descname">config</code><a class="headerlink" href="#pyVirtualize.pyvSphere.vm._base.Details.config" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><em>vim.vm.Summary.ConfigSummary</em>, the config details of the current machine.</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">(vim.vm.Summary.ConfigSummary) {</div>
+<div class="line-block">
+<div class="line">dynamicType = &lt;unset&gt;,</div>
+<div class="line">dynamicProperty = (vmodl.DynamicProperty) [],</div>
+<div class="line"><strong>name</strong> = &#8216;Jenkins&#8217;,</div>
+<div class="line"><strong>template</strong> = false,</div>
+<div class="line">vmPathName = &#8216;[datastore1] Jenkins/Jenkins.vmx&#8217;,</div>
+<div class="line">memorySizeMB = 4096,</div>
+<div class="line">cpuReservation = 0,</div>
+<div class="line">memoryReservation = 0,</div>
+<div class="line">numCpu = 4,</div>
+<div class="line">numEthernetCards = 1,</div>
+<div class="line">numVirtualDisks = 1,</div>
+<div class="line">uuid = &#8216;420c6ef6-eef0-03ff-20f2-5d2479b2afdc&#8217;,</div>
+<div class="line">instanceUuid = &#8216;500ce065-5f5b-17fa-fa8f-d7033e548ecb&#8217;,</div>
+<div class="line">guestId = &#8216;windows7_64Guest&#8217;,</div>
+<div class="line">guestFullName = &#8216;Microsoft Windows 7 (64-bit)&#8217;,</div>
+<div class="line">annotation = &#8216;&#8217;,</div>
+<div class="line">product = &lt;unset&gt;,</div>
+<div class="line">installBootRequired = false,</div>
+<div class="line">ftInfo = &lt;unset&gt;,</div>
+<div class="line">managedBy = &lt;unset&gt;</div>
+</div>
+<div class="line">} </div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.pyvSphere.vm._base.Details.guest">
+<code class="descname">guest</code><a class="headerlink" href="#pyVirtualize.pyvSphere.vm._base.Details.guest" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><em>vim.vm.Summary.GuestSummary</em>, the guest details of the current machine.</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">(vim.vm.Summary.GuestSummary) {</div>
+<div class="line-block">
+<div class="line">dynamicType = &lt;unset&gt;,</div>
+<div class="line">dynamicProperty = (vmodl.DynamicProperty) [],</div>
+<div class="line">guestId = &#8216;windows7_64Guest&#8217;,</div>
+<div class="line"><strong>guestFullName</strong> = &#8216;Microsoft Windows 7 (64-bit)&#8217;,</div>
+<div class="line">toolsStatus = &#8216;toolsOk&#8217;,</div>
+<div class="line">toolsVersionStatus = &#8216;guestToolsCurrent&#8217;,</div>
+<div class="line">toolsVersionStatus2 = &#8216;guestToolsCurrent&#8217;,</div>
+<div class="line">toolsRunningStatus = &#8216;guestToolsRunning&#8217;,</div>
+<div class="line"><strong>hostName</strong> = &#8216;W7x64&#8217;,</div>
+<div class="line"><strong>ipAddress</strong> = &#8216;10.112.19.116&#8217;</div>
+</div>
+<div class="line">} </div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.pyvSphere.vm._base.Details.runtime">
+<code class="descname">runtime</code><a class="headerlink" href="#pyVirtualize.pyvSphere.vm._base.Details.runtime" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><em>vim.vm.RuntimeInfo</em>, the runtime details of the current machine.</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">(vim.vm.RuntimeInfo) {</div>
+<div class="line-block">
+<div class="line">dynamicType = &lt;unset&gt;,</div>
+<div class="line">dynamicProperty = (vmodl.DynamicProperty) [],</div>
+<div class="line">device = (vim.vm.DeviceRuntimeInfo) [</div>
+<div class="line-block">
+<div class="line">(vim.vm.DeviceRuntimeInfo) {</div>
+<div class="line-block">
+<div class="line">dynamicType = &lt;unset&gt;,</div>
+<div class="line">dynamicProperty = (vmodl.DynamicProperty) [],</div>
+<div class="line">runtimeState = (vim.vm.DeviceRuntimeInfo.VirtualEthernetCardRuntimeState) {</div>
+<div class="line-block">
+<div class="line">dynamicType = &lt;unset&gt;,</div>
+<div class="line">dynamicProperty = (vmodl.DynamicProperty) [],</div>
+<div class="line">vmDirectPathGen2Active = false,</div>
+<div class="line">vmDirectPathGen2InactiveReasonVm = (str) [],</div>
+<div class="line">vmDirectPathGen2InactiveReasonOther = (str) [</div>
+<div class="line-block">
+<div class="line">&#8216;vmNptIncompatibleNetwork&#8217;</div>
+</div>
+<div class="line">],</div>
+<div class="line">vmDirectPathGen2InactiveReasonExtended = &lt;unset&gt;,</div>
+<div class="line">reservationStatus = &lt;unset&gt;</div>
+</div>
+<div class="line">},</div>
+<div class="line">key = 4000</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">],</div>
+<div class="line">host = &#8216;vim.HostSystem:host-14&#8217;,</div>
+<div class="line">connectionState = &#8216;connected&#8217;,</div>
+<div class="line"><strong>powerState</strong> = &#8216;poweredOn&#8217;,</div>
+<div class="line">faultToleranceState = &#8216;notConfigured&#8217;,</div>
+<div class="line">dasVmProtection = &lt;unset&gt;,</div>
+<div class="line">toolsInstallerMounted = false,</div>
+<div class="line">suspendTime = &lt;unset&gt;,</div>
+<div class="line">bootTime = 2017-02-17T14:39:35.245193Z,</div>
+<div class="line">suspendInterval = 0L,</div>
+<div class="line">question = &lt;unset&gt;,</div>
+<div class="line">memoryOverhead = &lt;unset&gt;,</div>
+<div class="line">maxCpuUsage = 9196,</div>
+<div class="line">maxMemoryUsage = 4096,</div>
+<div class="line">numMksConnections = 0,</div>
+<div class="line">recordReplayState = &#8216;inactive&#8217;,</div>
+<div class="line">cleanPowerOff = &lt;unset&gt;,</div>
+<div class="line">needSecondaryReason = &lt;unset&gt;,</div>
+<div class="line">onlineStandby = false,</div>
+<div class="line">minRequiredEVCModeKey = &lt;unset&gt;,</div>
+<div class="line">consolidationNeeded = false,</div>
+<div class="line">offlineFeatureRequirement = (vim.vm.FeatureRequirement) [</div>
+<div class="line-block">
+<div class="line">(vim.vm.FeatureRequirement) {</div>
+<div class="line-block">
+<div class="line">dynamicType = &lt;unset&gt;,</div>
+<div class="line">dynamicProperty = (vmodl.DynamicProperty) [],</div>
+<div class="line">key = &#8216;cpuid.lm&#8217;,</div>
+<div class="line">featureName = &#8216;cpuid.lm&#8217;,</div>
+<div class="line">value = &#8216;Bool:Min:1&#8217;</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">],</div>
+<div class="line">featureRequirement = (vim.vm.FeatureRequirement) [</div>
+<div class="line-block">
+<div class="line">(vim.vm.FeatureRequirement) {</div>
+<div class="line-block">
+<div class="line">dynamicType = &lt;unset&gt;,</div>
+<div class="line">dynamicProperty = (vmodl.DynamicProperty) [],</div>
+<div class="line">key = &#8216;cpuid.SSE3&#8217;,</div>
+<div class="line">featureName = &#8216;cpuid.SSE3&#8217;,</div>
+<div class="line">value = &#8216;Bool:Min:1&#8217;</div>
+</div>
+<div class="line">},...</div>
+</div>
+<div class="line">],</div>
+<div class="line">featureMask = (vim.host.FeatureMask) [],</div>
+<div class="line">vFlashCacheAllocation = 0L,</div>
+<div class="line">paused = false,</div>
+<div class="line">snapshotInBackground = false,</div>
+<div class="line">quiescedForkParent = &lt;unset&gt;</div>
+</div>
+<div class="line">}</div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyVirtualize.pyvSphere.vm._base.Details.storage">
+<code class="descname">storage</code><a class="headerlink" href="#pyVirtualize.pyvSphere.vm._base.Details.storage" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><em>vim.vm.Summary.StorageSummary</em>, the storage details of the current machine.</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">(vim.vm.Summary.StorageSummary) {</div>
+<div class="line-block">
+<div class="line">dynamicType = &lt;unset&gt;,</div>
+<div class="line">dynamicProperty = (vmodl.DynamicProperty) [],</div>
+<div class="line">committed = 38614424818L,</div>
+<div class="line">uncommitted = 239075873L,</div>
+<div class="line">unshared = 34120663040L,</div>
+<div class="line">timestamp = 2017-05-18T09:16:22.357187Z</div>
+</div>
+<div class="line">} </div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="virtualmachines-operations">
+<h2>VirtualMachines Operations<a class="headerlink" href="#virtualmachines-operations" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations">
+<em class="property">class </em><code class="descclassname">pyVirtualize.pyvSphere.vm.operation.file.</code><code class="descname">FileOperations</code><span class="sig-paren">(</span><em>vim</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyVirtualize.pyvSphere.vm.operation._base.BaseOperation</span></code></p>
+<p>FileOperations provides APIs to manipulate the guest operating system file options.</p>
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.create_local">
+<code class="descname">create_local</code><span class="sig-paren">(</span><em>path</em>, <em>contents=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.create_local" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.create_remote">
+<code class="descname">create_remote</code><span class="sig-paren">(</span><em>path</em>, <em>contents=None</em>, <em>credentials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.create_remote" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> &#8211; </li>
+<li><strong>contents</strong> &#8211; </li>
+<li><strong>credentials</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.delete_local">
+<code class="descname">delete_local</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.delete_local" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.delete_remote">
+<code class="descname">delete_remote</code><span class="sig-paren">(</span><em>path</em>, <em>credentials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.delete_remote" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.download">
+<code class="descname">download</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em>, <em>credentials=None</em>, <em>overwrite=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the file/directory into the guest operating system.
+In case of file it will &#8216;pyVirtualize&#8217; requires the file path and &#8216;dest&#8217; also requires the path specifying file name. 
+But when &#8216;pyVirtualize&#8217; is path representing folder/directory then it will copy the contents of the directory recursively
+into specified &#8216;dest&#8217; path.</p>
+<p>NOTE: It creates the directories automatically missing in the path. Also in case of file, then it overwrites in the &#8216;dest&#8217;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> &#8211; (str)
+Valid source location that can be either file or directory.</li>
+<li><strong>dest</strong> &#8211; (str)
+A destination location for file or directory respectively.</li>
+<li><strong>credentials</strong> &#8211; (str)
+Specify the credentials type string.
+Which was added using &#8216;set_credentials&#8217; function.
+If string is left empty, it will find the &#8216;default&#8217; credentials type and will use them.
+And if it doesn&#8217;t find any, then it will raise an Exception.</li>
+<li><strong>overwrite</strong> &#8211; (bool)
+Overwrites the file if present on local when download.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.get_remote_dir_desc">
+<code class="descname">get_remote_dir_desc</code><span class="sig-paren">(</span><em>path</em>, <em>credentials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.get_remote_dir_desc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.list_dir_in_vm">
+<code class="descname">list_dir_in_vm</code><span class="sig-paren">(</span><em>path</em>, <em>credentials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.list_dir_in_vm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information about files or directories in the guest.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> &#8211; (str)
+The complete path to the directory or file to query.</li>
+<li><strong>credentials</strong> &#8211; (str)
+Specify the credentials type string.
+Which was added using &#8216;set_credentials&#8217; function.
+If string is left empty, it will find the &#8216;default&#8217; credentials type and will use them.
+And if it doesn&#8217;t find any, then it will raise an Exception.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><dl class="docutils">
+<dt>vim.vm.guest.FileManager.ListFileInfo:</dt>
+<dd><p class="first last">A <cite>GuestListFileInfo</cite> object containing information for all the matching files in the filePath and 
+the number of files left to be returned.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.move_local">
+<code class="descname">move_local</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em>, <em>credentials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.move_local" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.move_remote">
+<code class="descname">move_remote</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em>, <em>credentials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.move_remote" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.remote_path_exists">
+<code class="descname">remote_path_exists</code><span class="sig-paren">(</span><em>path</em>, <em>credentials=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.remote_path_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the presence of the path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> &#8211; (str)
+The complete path to the directory or file to query.</li>
+<li><strong>credentials</strong> &#8211; (str)
+Specify the credentials type string.
+Which was added using &#8216;set_credentials&#8217; function.
+If string is left empty, it will find the &#8216;default&#8217; credentials type and will use them.
+And if it doesn&#8217;t find any, then it will raise an Exception.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(bool) &#8216;True&#8217; if path exists or else &#8216;False&#8217; if it doesn&#8217;t.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.upgrade_vm_tools">
+<code class="descname">upgrade_vm_tools</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.upgrade_vm_tools" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.file.FileOperations.upload">
+<code class="descname">upload</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em>, <em>credentials=None</em>, <em>overwrite=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations.upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uploads the file/directory into the guest operating system.
+In case of file it will &#8216;pyVirtualize&#8217; requires the file path and &#8216;dest&#8217; also requires the path specifying file name. 
+But when &#8216;pyVirtualize&#8217; is path representing folder/directory then it will copy the contents of the directory recursively
+into specified &#8216;dest&#8217; path.</p>
+<p>NOTE: It creates the directories automatically missing in the path. Also in case of file, then it overwrites in the &#8216;dest&#8217;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> &#8211; (str)
+Valid source location that can be either file or directory.</li>
+<li><strong>dest</strong> &#8211; (str)
+A destination location for file or directory respectively.</li>
+<li><strong>credentials</strong> &#8211; (str)
+Specify the credentials type string.
+Which was added using &#8216;set_credentials&#8217; function.
+If string is left empty, it will find the &#8216;default&#8217; credentials type and will use them.
+And if it doesn&#8217;t find any, then it will raise an Exception.</li>
+<li><strong>overwrite</strong> &#8211; (bool)
+Overwrites the file if present on guest while upload.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyVirtualize.pyvSphere.vm.operation.power.PowerOperations">
+<em class="property">class </em><code class="descclassname">pyVirtualize.pyvSphere.vm.operation.power.</code><code class="descname">PowerOperations</code><span class="sig-paren">(</span><em>vim</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.power.PowerOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyVirtualize.pyvSphere.vm.operation._base.BaseOperation</span></code></p>
+<p>PowerOperations provides APIs to manipulate the guest operating system power options.</p>
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.power_off">
+<code class="descname">power_off</code><span class="sig-paren">(</span><em>sync=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.power_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the hard power off on this virtual machine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sync</strong> &#8211; (bool)
+When &#8216;sync&#8217; is set to True, command will wait until VM is completely powered Off.
+Else it wait just trigger the power Off and returns back.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.power_on">
+<code class="descname">power_on</code><span class="sig-paren">(</span><em>sync=True</em>, <em>wait_for_guest_ready=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.power_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Powers on this virtual machine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>sync</strong> &#8211; (bool)
+When &#8216;sync&#8217; is set to True, command will wait until VM is completely powered On.
+Else it will just trigger the power On and returns back.</li>
+<li><strong>wait_for_guest_ready</strong> &#8211; (bool)
+When &#8216;wait_for_guest_ready&#8217; is to True, command will wait until guest operations is ready i.e. logged-in successfully.
+Else it will return when it power&#8217;s On completely.
+&#8216;wait_for_guest_ready&#8217; works when &#8216;sync&#8217; is enabled/True.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><em>sync=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets power on this virtual machine. 
+If the current state is poweredOn, then this method first performs powerOff(hard). 
+Once the power state is poweredOff, then this method performs powerOn(option).
+Although this method functions as a powerOff followed by a powerOn, 
+the two operations are atomic with respect to other clients, 
+meaning that other power operations cannot be performed until the reset method completes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sync</strong> &#8211; (bool)
+When &#8216;sync&#8217; is set to True, command will wait until VM is completely powered Off and powered On back.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.restart">
+<code class="descname">restart</code><span class="sig-paren">(</span><em>sync=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends the restart command to guest operating system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sync</strong> &#8211; (bool)
+When &#8216;sync&#8217; is set to True, command will wait until VM is completely powered Off and powered On back.
+Else it will just trigger the restart and returns back;; but it will wait till shutdown of the system atleast.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.shutdown">
+<code class="descname">shutdown</code><span class="sig-paren">(</span><em>sync=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Issues a command to the guest operating system asking it to perform a clean shutdown of all services.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sync</strong> &#8211; (bool)
+When &#8216;sync&#8217; is set to True, command will wait until VM is completely powered Off.
+Else it will just trigger the shutdown and returns back.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.upgrade_vm_tools">
+<code class="descname">upgrade_vm_tools</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.power.PowerOperations.upgrade_vm_tools" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations">
+<em class="property">class </em><code class="descclassname">pyVirtualize.pyvSphere.vm.operation.process.</code><code class="descname">ProcessOperations</code><span class="sig-paren">(</span><em>vim</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyVirtualize.pyvSphere.vm.operation._base.BaseOperation</span></code></p>
+<p>ProcessOperations provides APIs to manipulate the guest operating system processes.</p>
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations.execute">
+<code class="descname">execute</code><span class="sig-paren">(</span><em>program</em>, <em>arguments=''</em>, <em>cwd=''</em>, <em>env_vars=None</em>, <em>start_minimized=False</em>, <em>wait_for_guest_ready=True</em>, <em>wait_for_program_to_exit=True</em>, <em>credentials=None</em>, <em>interactive=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a program in the guest operating system.
+If program is not executed then it will raise an Exception &#8216;&#8217;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>program</strong> &#8211; (str) 
+The absolute path to the program to start.
+For Linux guest operating systems, /bin/bash is used to start the program.
+For Solaris guest operating systems, /bin/bash is used to start the program if it exists. 
+Otherwise /bin/sh is used. 
+If /bin/sh is used, then the process ID returned by StartProgramInGuest will be that of 
+the shell used to start the program, rather than the program itself, 
+due to the differences in how /bin/sh and /bin/bash work. 
+This PID will still be usable for watching the process 
+with ListProcessesInGuest to find its exit code and elapsed time.</li>
+<li><strong>arguments</strong> &#8211; (str)
+The arguments to the program. 
+In Linux and Solaris guest operating systems, the program will be executed by a guest shell. 
+This allows stdio redirection, 
+but may also require that characters which must be escaped to the shell also be escaped on the command line provided.
+For Windows guest operating systems, prefixing the command with &#8220;cmd /c&#8221; can provide stdio redirection.</li>
+<li><strong>cwd</strong> &#8211; (str)
+The absolute path of the working directory for the program to be run. 
+VMware recommends explicitly setting the working directory for the program to be run. 
+If this value is unset or is an empty string, the behavior depends on the guest operating system. 
+For Linux guest operating systems, if this value is unset or is an empty string, 
+the working directory will be the home directory of the user associated with the guest authentication. 
+For other guest operating systems, if this value is unset, the behavior is unspecified.</li>
+<li><strong>env_vars</strong> &#8211; (str)
+An array of environment variables, specified in the guest OS notation 
+(eg PATH=c:bin;c:windowssystem32 or LD_LIBRARY_PATH=/usr/lib:/lib), 
+to be set for the program being run. 
+Note that these are not additions to the default environment variables; 
+they define the complete set available to the program. 
+If none are specified the values are guest dependent.</li>
+<li><strong>start_minimized</strong> &#8211; (bool)
+This argument applies only for &#8216;Windows&#8217; guests.
+Makes any program window start minimized.</li>
+<li><strong>wait_for_guest_ready</strong> &#8211; (bool)
+This argument specifies, whether to check for Guest operation are ready before starting the program.
+If &#8216;True&#8217;, it halts execution until Guest is ready (or logged in, maybe using auto-logon),
+Else, it directly starts execution.</li>
+<li><strong>wait_for_program_to_exit</strong> &#8211; (bool)
+This argument will wait until the programs gets executed and returns back some value.
+It can also be configured with a &#8216;time-out&#8217; period, which will take value from parent VM object.</li>
+<li><strong>credentials</strong> &#8211; (str)
+Specify the credentials type string.
+Which was added using &#8216;set_credentials&#8217; function.
+If string is left empty, it will find the &#8216;default&#8217; credentials type and will use them.
+And if it doesn&#8217;t find any, then it will raise an Exception.</li>
+<li><strong>interactive</strong> &#8211; (bool) 
+This is set to true if the client wants an interactive session in the guest.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>vim.vm.guest.ProcessManager.ProcessInfo:
+Attributes:</p>
+<blockquote>
+<div><p>name (str): The process name</p>
+<p>pid (long): The process ID</p>
+<p>owner (str): The process owner</p>
+<p>cmdLine (str): The full command line</p>
+<p>startTime (datetime): The start time of the process</p>
+<dl class="docutils">
+<dt>endTime (datetime, optional): If the process was started using StartProgramInGuest then </dt>
+<dd><p class="first last">the process completion time will be available if queried within 5 minutes after it completes.</p>
+</dd>
+<dt>exitCode (int, optional): If the process was started using StartProgramInGuest then </dt>
+<dd><p class="first last">the process exit code will be available if queried within 5 minutes after it completes.</p>
+</dd>
+</dl>
+</div></blockquote>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><dl class="first docutils">
+<dt>vim.fault.GuestOperationsFault:</dt>
+<dd><p class="first last">if there is an error processing a guest operation.</p>
+</dd>
+<dt>vim.fault.InvalidState:</dt>
+<dd><p class="first last">if the operation cannot be performed because of the virtual machine&#8217;s current state.</p>
+</dd>
+<dt>vim.fault.TaskInProgress:</dt>
+<dd><p class="first last">if the virtual machine is busy.</p>
+</dd>
+<dt>vim.fault.FileFault:</dt>
+<dd><p class="first last">if there is a file error in the guest operating system.</p>
+</dd>
+<dt>vim.fault.GuestOperationsUnavailable:</dt>
+<dd><p class="first last">if the VM agent for guest operations is not running.</p>
+</dd>
+<dt>vim.fault.InvalidPowerState:</dt>
+<dd><p class="first last">if the VM is not powered on.</p>
+</dd>
+<dt>vim.fault.FileNotFound:</dt>
+<dd><p class="first last">if the program path does not exist.</p>
+</dd>
+<dt>vim.fault.CannotAccessFile:</dt>
+<dd><p class="first last">if the program path cannot be accessed.</p>
+</dd>
+<dt>vim.fault.GuestPermissionDenied:</dt>
+<dd><p class="first last">if the program path cannot be run because the guest authentication will not allow the operation.</p>
+</dd>
+<dt>vim.fault.InvalidGuestLogin:</dt>
+<dd><p class="first last">if the the guest authentication information was not accepted.</p>
+</dd>
+<dt>vim.fault.GuestComponentsOutOfDate:</dt>
+<dd><p class="first last">if the guest agent is too old to support the operation.</p>
+</dd>
+<dt>vim.fault.OperationNotSupportedByGuest:</dt>
+<dd><p class="first last">if the operation is not supported by the guest OS.</p>
+</dd>
+<dt>vim.fault.OperationDisabledByGuest:</dt>
+<dd><p class="first last">if the operation is not enabled due to guest agent configuration.</p>
+</dd>
+</dl>
+<p class="last">pyVirtualize.utils.exceptions.ProgramNotExecuted</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations.get_env_var">
+<code class="descname">get_env_var</code><span class="sig-paren">(</span><em>names=''</em>, <em>credentials=None</em>, <em>interactive=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations.get_env_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads an environment variable from the guest OS.
+If the authentication uses interactiveSession, 
+then the environment being read will be that of the user logged into the desktop. 
+Otherwise it&#8217;s the environment of the system user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>names</strong> &#8211; (str, optional) 
+The names of the variables to be read. If not set, then all the environment variables are returned.</li>
+<li><strong>credentials</strong> &#8211; (str)
+Specify the credentials type string.
+Which was added using &#8216;set_credentials&#8217; function.
+If string is left empty, it will find the &#8216;default&#8217; credentials type and will use them.
+And if it doesn&#8217;t find any, then it will raise an Exception.</li>
+<li><strong>interactive</strong> &#8211; (bool) 
+This is set to true if the client wants an interactive session in the guest.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A string array containing the value of the variables,</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>or all environment variables if nothing is specified. 
+The format of each string is &#8220;name=value&#8221;. 
+If any specified environment variable isn&#8217;t set, then nothing is returned for that variable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><dl class="first last docutils">
+<dt>vim.fault.GuestOperationsFault:</dt>
+<dd><p class="first last">if there is an error processing a guest operation.</p>
+</dd>
+<dt>vim.fault.InvalidState:</dt>
+<dd><p class="first last">if the operation cannot be performed because of the virtual machine&#8217;s current state.</p>
+</dd>
+<dt>vim.fault.TaskInProgress:</dt>
+<dd><p class="first last">if the virtual machine is busy. accepted by the guest OS.</p>
+</dd>
+<dt>vim.fault.GuestOperationsUnavailable:</dt>
+<dd><p class="first last">if the VM agent for guest operations is not running.</p>
+</dd>
+<dt>vim.fault.InvalidPowerState:</dt>
+<dd><p class="first last">if the VM is not powered on.</p>
+</dd>
+<dt>vim.fault.GuestPermissionDenied:</dt>
+<dd><p class="first last">if there are insufficient permissions in the guest OS.</p>
+</dd>
+<dt>vim.fault.InvalidGuestLogin:</dt>
+<dd><p class="first last">if the the guest authentication information was not accepted.</p>
+</dd>
+<dt>vim.fault.GuestComponentsOutOfDate:</dt>
+<dd><p class="first last">if the guest agent is too old to support the operation.</p>
+</dd>
+<dt>vim.fault.OperationNotSupportedByGuest:</dt>
+<dd><p class="first last">if the operation is not supported by the guest OS.</p>
+</dd>
+<dt>vim.fault.OperationDisabledByGuest:</dt>
+<dd><p class="first last">if the operation is not enabled due to guest agent configuration.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations.list_processes">
+<code class="descname">list_processes</code><span class="sig-paren">(</span><em>pids=[]</em>, <em>credentials=None</em>, <em>interactive=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations.list_processes" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the processes running in the guest operating system, 
+plus those started by StartProgramInGuest that have recently completed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pids</strong> &#8211; (list)
+If set, only return information about the specified processes. 
+Otherwise, information about all processes are returned. 
+If a specified processes does not exist, nothing will be returned for that process.</li>
+<li><strong>credentials</strong> &#8211; (str)
+Specify the credentials type string.
+Which was added using &#8216;set_credentials&#8217; function.
+If string is left empty, it will find the &#8216;default&#8217; credentials type and will use them.
+And if it doesn&#8217;t find any, then it will raise an Exception.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>[vim.vm.guest.ProcessManager.ProcessInfo]:
+The list running processes is returned in an array of <a href="#id1"><span class="problematic" id="id2">`GuestProcessInfo`_</span></a> structures.
+Attributes:</p>
+<blockquote>
+<div><p>name (str): The process name</p>
+<p>pid (long): The process ID</p>
+<p>owner (str): The process owner</p>
+<p>cmdLine (str): The full command line</p>
+<p>startTime (datetime): The start time of the process</p>
+<dl class="docutils">
+<dt>endTime (datetime, optional): If the process was started using StartProgramInGuest then </dt>
+<dd><p class="first last">the process completion time will be available if queried within 5 minutes after it completes.</p>
+</dd>
+<dt>exitCode (int, optional): If the process was started using StartProgramInGuest then </dt>
+<dd><p class="first last">the process exit code will be available if queried within 5 minutes after it completes.</p>
+</dd>
+</dl>
+</div></blockquote>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><dl class="first last docutils">
+<dt>vim.fault.GuestOperationsFault:</dt>
+<dd><p class="first last">if there is an error processing a guest operation.</p>
+</dd>
+<dt>vim.fault.InvalidState:</dt>
+<dd><p class="first last">if the operation cannot be performed because of the virtual machine&#8217;s current state.</p>
+</dd>
+<dt>vim.fault.TaskInProgress:</dt>
+<dd><p class="first last">if the virtual machine is busy.</p>
+</dd>
+<dt>vim.fault.GuestOperationsUnavailable:</dt>
+<dd><p class="first last">if the VM agent for guest operations is not running.</p>
+</dd>
+<dt>vim.fault.InvalidPowerState:</dt>
+<dd><p class="first last">if the VM is not powered on.</p>
+</dd>
+<dt>vim.fault.GuestPermissionDenied:</dt>
+<dd><p class="first last">if there are insufficient permissions in the guest OS.</p>
+</dd>
+<dt>vim.fault.InvalidGuestLogin:</dt>
+<dd><p class="first last">if the the guest authentication information was not accepted.</p>
+</dd>
+<dt>vim.fault.GuestComponentsOutOfDate:</dt>
+<dd><p class="first last">if the guest agent is too old to support the operation.</p>
+</dd>
+<dt>vim.fault.OperationNotSupportedByGuest:</dt>
+<dd><p class="first last">if the operation is not supported by the guest OS.</p>
+</dd>
+<dt>vim.fault.OperationDisabledByGuest:</dt>
+<dd><p class="first last">if the operation is not enabled due to guest agent configuration.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations.upgrade_vm_tools">
+<code class="descname">upgrade_vm_tools</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations.upgrade_vm_tools" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations">
+<em class="property">class </em><code class="descclassname">pyVirtualize.pyvSphere.vm.operation.snapshot.</code><code class="descname">SnapshotOperations</code><span class="sig-paren">(</span><em>vim</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyVirtualize.pyvSphere.vm.operation._base.BaseOperation</span></code></p>
+<p>SnapshotOperations provides APIs to manipulate the snapshot operations on the Virtual Machine.</p>
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>name</em>, <em>desc=''</em>, <em>memory=True</em>, <em>quiesce=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new snapshot of this virtual machine. 
+As a side effect, this updates the current snapshot.
+Snapshots are not supported for Fault Tolerance primary and secondary virtual machines.
+Any % (percent) character used in this name parameter must be escaped, 
+unless it is used to start an escape sequence. 
+Clients may also escape any other characters in this name parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> &#8211; (str)
+The name for this snapshot. The name need not be unique for this virtual machine.</li>
+<li><strong>desc</strong> &#8211; (str, optional)
+A description for this snapshot. If omitted, a default description may be provided.</li>
+<li><strong>memory</strong> &#8211; (bool, optional)
+If TRUE, a dump of the internal state of the virtual machine (basically a memory dump) 
+is included in the snapshot. 
+Memory snapshots consume time and resources, and thus take longer to create. 
+When set to FALSE, the power state of the snapshot is set to powered off. 
+<a href="#id3"><span class="problematic" id="id4">`capabilities`_</span></a> indicates whether or not this virtual machine supports this operation.
+Default: &#8216;True&#8217;</li>
+<li><strong>quiesce</strong> &#8211; (bool, optional)
+If TRUE and the virtual machine is powered on when the snapshot is taken, 
+VMware Tools is used to quiesce the file system in the virtual machine. 
+This assures that a disk snapshot represents a consistent state of the guest file systems. 
+If the virtual machine is powered off or VMware Tools are not available, the quiesce flag is ignored.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.remove">
+<code class="descname">remove</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the specified snapshot from the machine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> &#8211; (str)
+Name of the snapshot.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.remove_all">
+<code class="descname">remove_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.remove_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all snapshots from the machine.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.remove_current">
+<code class="descname">remove_current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.remove_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the current snapshot from the machine.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.revert">
+<code class="descname">revert</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.revert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the execution state of the virtual machine to the state of this snapshot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> &#8211; (str)
+Name of the snapshot.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.revert_to_current">
+<code class="descname">revert_to_current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.revert_to_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the execution state of the virtual machine to the state of current snapshot.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.upgrade_vm_tools">
+<code class="descname">upgrade_vm_tools</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.snapshot.SnapshotOperations.upgrade_vm_tools" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyVirtualize.pyvSphere.vm.operation.vmutils.VMUtils">
+<em class="property">class </em><code class="descclassname">pyVirtualize.pyvSphere.vm.operation.vmutils.</code><code class="descname">VMUtils</code><span class="sig-paren">(</span><em>vim</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.vmutils.VMUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pyVirtualize.pyvSphere.vm.operation._base.BaseOperation</span></code></p>
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.vmutils.VMUtils.clone">
+<code class="descname">clone</code><span class="sig-paren">(</span><em>template_name</em>, <em>vm_name</em>, <em>datacenter_name</em>, <em>resource_pool=None</em>, <em>host=None</em>, <em>is_template=False</em>, <em>snapshot=None</em>, <em>memory=False</em>, <em>datastore_name=None</em>, <em>vm_folder=None</em>, <em>power_on=False</em>, <em>changeSID=False</em>, <em>nw={}</em>, <em>identification={}</em>, <em>timezone=40</em>, <em>autologon=False</em>, <em>autologonCount=1</em>, <em>autologonAdminPwd=''</em>, <em>fullName=None</em>, <em>orgName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.vmutils.VMUtils.clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a clone of this virtual machine. 
+If the virtual machine is used as a template, this method corresponds to the deploy command.
+Any % (percent) character used in this name parameter must be escaped, 
+unless it is used to start an escape sequence. 
+Clients may also escape any other characters in this name parameter.
+The privilege required on the source virtual machine depends on the source and destination types:</p>
+<blockquote>
+<div><ul class="simple">
+<li>source is virtual machine, destination is virtual machine - VirtualMachine.Provisioning.Clone</li>
+<li>source is virtual machine, destination is template - VirtualMachine.Provisioning.CreateTemplateFromVM</li>
+<li>source is template, destination is virtual machine - VirtualMachine.Provisioning.DeployTemplate</li>
+<li><dl class="first docutils">
+<dt>source is template, destination is template - VirtualMachine.Provisioning.CloneTemplate</dt>
+<dd>If customization is requested in the CloneSpec, then the VirtualMachine.Provisioning.Customize 
+privilege must also be held on the source virtual machine.
+The Resource.AssignVMToPool privilege is also required for the resource pool specified in the CloneSpec,
+if the destination is not a template. 
+The Datastore.AllocateSpace privilege is required on all datastores where the clone is created.</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>template_name</strong> &#8211; (str)
+Source VirtualMachine/Template name.</li>
+<li><strong>vm_name</strong> &#8211; (str)
+The name of the new virtual machine.</li>
+<li><strong>datacenter_name</strong> &#8211; (str)
+Datacenter name on which source image resides.</li>
+<li><strong>resource_pool</strong> &#8211; (str)
+The resource pool to which this virtual machine should be attached. 
+For a relocate or clone operation to a virtual machine, if the argument is not supplied, 
+the current resource pool of virtual machine is used. 
+For a clone operation to a template, this argument is ignored. 
+For a clone operation from a template to a virtual machine, this argument is required.</li>
+<li><strong>host</strong> &#8211; <p>(str)
+The target host for the virtual machine. If not specified,</p>
+<blockquote>
+<div><ul>
+<li>if resource pool is not specified, current host is used.</li>
+<li>if resource pool is specified, and the target pool represents a stand-alone host, the host is used.</li>
+<li><dl class="first docutils">
+<dt>if resource pool is specified, and the target pool represents a DRS-enabled cluster, </dt>
+<dd>a host selected by DRS is used.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>if resource pool is specified and the target pool represents a cluster without DRS enabled, </dt>
+<dd>an InvalidArgument exception be thrown.</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><strong>is_template</strong> &#8211; (bool, optional) 
+Specifies whether or not the new virtual machine should be marked as a template.
+Default, &#8216;False&#8217;.</li>
+<li><strong>snapshot</strong> &#8211; (str, optional) 
+Snapshot reference from which to base the clone.
+If this parameter is set, the clone is based off of the snapshot point. 
+This means that the newly created virtual machine will have the same configuration as the virtual machine 
+at the time the snapshot was taken.If this property is not set then 
+the clone is based off of the virtual machine&#8217;s current configuration.
+Setting this is only supported if the host this virtual machine is currently residing on supports cloning from a snapshot point. 
+Such support does not need to exist on the destination host for the clone.
+Setting this is only supported if the virtual machine supports reporting snapshot configuration information. 
+See snapshotConfigSupported. 
+Such support does not need to exist on the destination host for the clone.</li>
+<li><strong>memory</strong> &#8211; (bool, optional) 
+Flag indicating whether to retain a copy of the source virtual machine&#8217;s memory state in the clone. 
+Retaining the memory state during clone results in a clone in suspended state with all network adapters removed to avoid network conflicts, 
+except those with a VirtualEthernetCard.addressType of &#8220;manual&#8221;. 
+Users of this flag should take special care so that, 
+when adding a network adapter back to the clone, 
+the VM is not resumed on the same VM network as the source VM, 
+or else MAC address conflicts could occur. 
+When cloning between two hosts with different CPUs outside an EVC cluster, 
+users of this flag should be aware that vCenter does not verify CPU compatibility between the 
+clone&#8217;s memory state and the target host prior to the clone operation, 
+so the clone may fail to resume until it is migrated to a host with a compatible CPU.
+This flag is ignored if the snapshot parameter is unset. 
+This flag only applies for a snapshot taken on a running or suspended virtual machine with the &#8216;memory&#8217; parameter set to true, 
+because otherwise the snapshot has no memory state. 
+This flag defaults to false.</li>
+<li><strong>datastore_name</strong> &#8211; (str, optional)
+Name of the datastore where target image is going to reside.
+Default, first datastore alphabetically from the list will be selected.</li>
+<li><strong>datastore_name</strong> &#8211; (str, optional)
+The datastore where the virtual machine should be located. If not specified, the current datastore is used.</li>
+<li><strong>vm_folder</strong> &#8211; (str, optional)
+Name of the folder under which image should be listed post deployment.
+Default, will be shown under root folder.</li>
+<li><strong>power_on</strong> &#8211; (bool, optional)
+Power on the target VirtualMachine after deployment.
+Default, &#8216;False&#8217; i.e. it won&#8217;t power On.</li>
+<li><strong>changeSID</strong> &#8211; <p>(bool, optional) 
+The customization process should modify the machine&#8217;s security identifier (SID).</p>
+<blockquote>
+<div>For Vista OS, SID will always be modified.</div></blockquote>
+</li>
+<li><strong>identification</strong> &#8211; (dict, optional)
+The Identification data object type provides information needed to join a workgroup or domain.
+The Identification data object type maps to the Identification key in thesysprep.inf answer file. 
+These values are transferred into thesysprep.inf file that VirtualCenter stores on the target virtual disk.
+ex: {&#8216;domain&#8217;: DOMAIN_NAME, &#8216;admin&#8217;: ADMIN_NAME, &#8216;pwd&#8217;: ADMIN_PWD}</li>
+<li><strong>timezone</strong> &#8211; (int, optional)
+The time zone for the new virtual machine. 
+Numbers correspond to time zones listed in sysprep documentation at in Microsoft Technet.
+Default, 40 to IST time zone.</li>
+<li><strong>autologon</strong> &#8211; (bool, optional)
+Flag to determine whether or not the machine automatically logs on as Administrator.</li>
+<li><strong>autologonCount</strong> &#8211; (int, optional)
+If the AutoLogon flag is set, then the AutoLogonCount property specifies 
+the number of times the machine should automatically log on as Administrator. 
+Generally it should be 1, but if your setup requires a number of reboots, you may want to increase it.</li>
+<li><strong>autologonAdminPwd</strong> &#8211; (str, optional)
+The new administrator password for the machine. 
+To specify that the password should be set to blank (that is, no password), set the password value to NULL.</li>
+<li><strong>nw</strong> &#8211; (dict, optional)
+IP settings that are specific to a particular virtual network adapter. 
+{&#8220;ip&#8221;: &#8220;x.x.x.x&#8221;, &#8220;subnet&#8221;: &#8220;x.x.x.x&#8221;, &#8220;gateway&#8221;: &#8220;x.x.x.x&#8221;, &#8220;dns&#8221;: [PRIMARY_DNS_IP, SECONDARY_DNS_IP]}</li>
+<li><strong>fullName</strong> &#8211; (str, optional)
+User&#8217;s full name.</li>
+<li><strong>orgName</strong> &#8211; (str, optional)
+User&#8217;s organization.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.vmutils.VMUtils.upgrade_vm_tools">
+<code class="descname">upgrade_vm_tools</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.vmutils.VMUtils.upgrade_vm_tools" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyVirtualize.pyvSphere.vm.operation.admin.AdminOperations">
+<em class="property">class </em><code class="descclassname">pyVirtualize.pyvSphere.vm.operation.admin.</code><code class="descname">AdminOperations</code><span class="sig-paren">(</span><em>vim</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.admin.AdminOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyVirtualize.pyvSphere.vm.operation.file.FileOperations" title="pyVirtualize.pyvSphere.vm.operation.file.FileOperations"><code class="xref py py-class docutils literal"><span class="pre">pyVirtualize.pyvSphere.vm.operation.file.FileOperations</span></code></a>, <a class="reference internal" href="#pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations" title="pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations"><code class="xref py py-class docutils literal"><span class="pre">pyVirtualize.pyvSphere.vm.operation.process.ProcessOperations</span></code></a></p>
+<dl class="method">
+<dt id="pyVirtualize.pyvSphere.vm.operation.admin.AdminOperations.execute_process_using_ps_tools">
+<code class="descname">execute_process_using_ps_tools</code><span class="sig-paren">(</span><em>program</em>, <em>arguments=()</em>, <em>admin_credentials='admin'</em>, <em>user_credentials='user'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyVirtualize.pyvSphere.vm.operation.admin.AdminOperations.execute_process_using_ps_tools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a program in the guest operating system using Admin credentials.
+If program is not executed then it will raise an Exception &#8216;&#8217;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>program</strong> &#8211; (str) 
+The absolute path to the program to start.
+For Linux guest operating systems, /bin/bash is used to start the program.
+For Solaris guest operating systems, /bin/bash is used to start the program if it exists. 
+Otherwise /bin/sh is used. 
+If /bin/sh is used, then the process ID returned by StartProgramInGuest will be that of 
+the shell used to start the program, rather than the program itself, 
+due to the differences in how /bin/sh and /bin/bash work. 
+This PID will still be usable for watching the process 
+with ListProcessesInGuest to find its exit code and elapsed time.</li>
+<li><strong>arguments</strong> &#8211; (str)
+The arguments to the program. 
+In Linux and Solaris guest operating systems, the program will be executed by a guest shell. 
+This allows stdio redirection, 
+but may also require that characters which must be escaped to the shell also be escaped on the command line provided.
+For Windows guest operating systems, prefixing the command with &#8220;cmd /c&#8221; can provide stdio redirection.</li>
+<li><strong>admin_credentials</strong> &#8211; (str)
+Specify the credentials type string for Administrator.
+Which was added using &#8216;set_credentials&#8217; function.
+If string is left empty, it will find the &#8216;default&#8217; credentials type and will use them.
+And if it doesn&#8217;t find any, then it will raise an Exception.</li>
+<li><strong>user_credentials</strong> &#8211; (str)
+Specify the credentials type string for User.
+Which was added using &#8216;set_credentials&#8217; function.
+If string is left empty, it will find the &#8216;default&#8217; credentials type and will use them.
+And if it doesn&#8217;t find any, then it will raise an Exception.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Rocky Ramchandani.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'alpha',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
