@@ -48,9 +48,9 @@ pip install pyVirtualize
 >>
 >> vm.set_credentials(username="myDomain\\myUsername", password="secret", credentials_type="user", default=True)
 >>
->> vm.operation.snapshot.revert_to_current()
->> vm.operation.power.power_on()
->> vm.operation.file.upload("/path/towards/my/src/file", "/path/towards/my/dest/file")
+>> vm.operations.snapshot.revert_to_current()
+>> vm.operations.power.power_on()
+>> vm.operations.file.upload("/path/towards/my/src/file", "/path/towards/my/dest/file")
 
 ```
 
