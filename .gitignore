@@ -1,0 +1,8 @@
+# Python compiled byte code
+*.pyc/
+
+# Virtualenv
+virtualenv/
+
+# PyCharm IDE
+.idea/
