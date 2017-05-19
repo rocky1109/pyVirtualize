@@ -2,8 +2,11 @@ __author__ = 'rramchandani'
 
 import subprocess
 
-from _winreg import HKEY_LOCAL_MACHINE, EnumValue, KEY_READ, KEY_WOW64_64KEY, \
-    OpenKey
+try:
+    from _winreg import HKEY_LOCAL_MACHINE, EnumValue, KEY_READ, KEY_WOW64_64KEY, \
+        OpenKey
+except ImportError:
+    pass
 
 
 class Process(object):
