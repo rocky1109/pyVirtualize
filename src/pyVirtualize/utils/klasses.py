@@ -35,10 +35,13 @@ class Variables(PersistableClass):
 
 import sys
 from subprocess import check_call
-if sys.hexversion > 0x03000000:
-    import winreg
-else:
-    import _winreg as winreg
+try:
+    if sys.hexversion > 0x03000000:
+        import winreg
+    else:
+        import _winreg as winreg
+except ImportError:
+    pass
 
 
 class Win32Environment(object):
