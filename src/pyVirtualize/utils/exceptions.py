@@ -16,3 +16,6 @@ class RacetrackError(Exception):
 
 class ProgramNotExecuted(Exception):
     message = "Program couldn't be executed within the Guest."
+
+class TaskExecutionFailed(Exception):
+    message = "Task couldn't get executed."
