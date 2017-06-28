@@ -21,5 +21,10 @@ from . import pyvSphere
 from pyvSphere import vSphere
 from utils.winutils import Process, WinUtils
 
+import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
 
 __all__ = ['pyvSphere', 'vSphere', 'Process', 'WinUtils']
