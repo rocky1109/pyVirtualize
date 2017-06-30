@@ -6,9 +6,10 @@ from .operation import Operations
 
 class VimBase:
 
-    vmomi_object = None
-    service_instance = None
-    credentials = dict()
+    def __init__(self, vmomi_object=None, service_instance=None, credentials=None):
+        self.vmomi_object = vmomi_object
+        self.service_instance = service_instance
+        self.credentials = dict() if credentials is None else credentials
 
 
 class Details:
