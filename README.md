@@ -35,7 +35,7 @@ pip install pyVirtualize
 ## Example
 ```python
 >> from pyVirtualize.pyvSphere import vSphere
->> vsphere = vSphere(address='10.112.67.60', username='administrator@vsphere.local', password='Ca$hc0w1')
+>> vsphere = vSphere(address='10.112.67.60', username='administrator@vsphere.local', password='Secured')
 >> vsphere.login()
 >>
 >> vsphere.Datacenters
