@@ -19,7 +19,7 @@ An of course, you can use it to access all the API through python.
 Clone the project in your local directory.
 ```
 git clone https://github.com/rocky1109/pyVirtualize.git
-cd pyRacetrack
+cd pyVirtualize
 ```
 
 Now install/build it using **setup.py** file as
