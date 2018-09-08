@@ -171,7 +171,7 @@ class VirtualMachine(object):
     def set_credentials(self, username, password, credentials_type, default=False):
         """
         Adds the credentials for the Guest operations on this virtual machine.
-        :param username: (str) Guest username. ex: domain_name\user_name
+        :param username: (str) Guest username. ex: domain_name\\user_name
         :param password: (str) Guest password.
         :param credentials_type: (any immutable) A dictionary key which helps to different credentials for the system. 
         :param default: (bool) If specified then for all the guest operation these credentials will be used by default.
