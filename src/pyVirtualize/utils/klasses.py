@@ -1,6 +1,6 @@
 __author__ = 'rramchandani'
 
-import cPickle
+import pickle
 from .parsers import GenericParsers
 
 
@@ -8,13 +8,13 @@ class PersistableClass(object):
 
     def load(self, cls_file):
         with open(cls_file, "rb") as fh:
-            _ = cPickle.load(fh)
+            _ = pickle.load(fh)
             for k, v in _.__dict__.items():
                 setattr(self, k, v)
 
     def store(cls, cls_file):
         with open(cls_file, "wb+") as fh:
-            cPickle.dump(cls, fh)
+            pickle.dump(cls, fh)
 
 
 class Variables(PersistableClass):
