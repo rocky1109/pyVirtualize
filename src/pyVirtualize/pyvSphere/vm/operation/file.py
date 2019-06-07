@@ -125,13 +125,14 @@ class FileOperations(BaseOperation):
 
         response = requests.get(url=url, verify=False)
 
-        if overwirte and os.path.exists(dest):
-            try:
-                self.delete_local(dest)
-            except:
-                pass
-        else:
-            return
+        if os.path.exists(dest):
+            if overwrite:
+                try:
+                    self.delete_local(dest)
+                except:
+                    pass
+            else:
+                return
 
         if response.status_code == requests.codes.ok:
             if not os.path.exists(os.path.dirname(dest)):
