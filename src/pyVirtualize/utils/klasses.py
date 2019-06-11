@@ -1,6 +1,10 @@
 __author__ = 'rramchandani'
 
-import pickle
+try:
+    import cPicle as pickle
+except Exception:
+    import pickle
+
 from .parsers import GenericParsers
 
 
