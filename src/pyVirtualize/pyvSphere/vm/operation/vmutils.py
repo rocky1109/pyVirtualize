@@ -8,7 +8,7 @@ from ._base import BaseOperation
 class VMUtils(BaseOperation):
 
     def clone(self, template_name, vm_name, datacenter_name,
-              resource_pool=None, host=None,
+              resource_pool_cluster=None, host=None,
               is_template=False, snapshot=None, memory=False,
               datastore_name=None, vm_folder=None, power_on=False,
               changeSID=False, nw={}, identification={},
@@ -40,7 +40,8 @@ class VMUtils(BaseOperation):
         :param datacenter_name: (str)
          Datacenter name on which source image resides.
          
-        :param resource_pool: (str)
+        :param resource_pool_cluster: (str)
+         Specify a Cluster name from which Resource pool will be picked.
          The resource pool to which this virtual machine should be attached. 
          For a relocate or clone operation to a virtual machine, if the argument is not supplied, 
          the current resource pool of virtual machine is used. 
@@ -163,8 +164,10 @@ class VMUtils(BaseOperation):
             datastore = None
             #datastore = self._get_obj([vim.Datastore], template.datastore[0].info.name)
 
-        if resource_pool:
-            resource = self._get_obj([vim.ResourcePool], resource_pool, not_found_return_none=True)
+        if resource_pool_cluster:
+            _ = self._get_obj([vim.ResourcePool])
+            resources = [i for i in _ if i.owner.name == resource_pool_cluster]
+            resource = resources[0] if resources else None
         else:
             resource = None
 
@@ -198,7 +201,7 @@ class VMUtils(BaseOperation):
         if on_host is not None:
             relospec.host = on_host
 
-        if resource_pool is not None:
+        if resource_pool_cluster is not None:
             relospec.pool = resource
 
         # Specification for a virtual machine cloning operation.

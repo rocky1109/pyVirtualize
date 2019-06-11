@@ -1,6 +1,10 @@
 __author__ = 'rramchandani'
 
-import cPickle
+try:
+    import cPicle as pickle
+except Exception:
+    import pickle
+
 from .parsers import GenericParsers
 
 
@@ -8,13 +12,13 @@ class PersistableClass(object):
 
     def load(self, cls_file):
         with open(cls_file, "rb") as fh:
-            _ = cPickle.load(fh)
+            _ = pickle.load(fh)
             for k, v in _.__dict__.items():
                 setattr(self, k, v)
 
     def store(cls, cls_file):
         with open(cls_file, "wb+") as fh:
-            cPickle.dump(cls, fh)
+            pickle.dump(cls, fh)
 
 
 class Variables(PersistableClass):
@@ -35,10 +39,13 @@ class Variables(PersistableClass):
 
 import sys
 from subprocess import check_call
-if sys.hexversion > 0x03000000:
-    import winreg
-else:
-    import _winreg as winreg
+try:
+    if sys.hexversion > 0x03000000:
+        import winreg
+    else:
+        import _winreg as winreg
+except ImportError:
+    pass
 
 
 class Win32Environment(object):

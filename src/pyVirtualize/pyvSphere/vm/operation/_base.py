@@ -5,6 +5,8 @@ import time
 from pyVmomi import vim
 from pyVirtualize.utils.exceptions import TimeOutException
 
+import pyVirtualize.utils.exceptions as exceps
+
 TIMEOUT = 600 #seconds, i.e 10 mins.
 
 
@@ -43,7 +45,7 @@ class BaseOperation(object):
             if state == 'running':
                 time.sleep(5)
             elif state != 'success':
-                raise Exception
+                raise exceps.TaskExecutionFailed
             else:
                 break
 
@@ -145,10 +147,16 @@ class BaseOperation(object):
             else:
                 obj = c
                 break
-        return obj if found and not_found_return_none else None
+        if not found:
+            return None if not_found_return_none else []
+        return obj
 
     def _get_snapshot_list(self):
-        snapshots = self.vmomi_object.snapshot.rootSnapshotList
+        _ = self.vmomi_object.snapshot
+        if not _:
+            return dict()
+
+        snapshots = _.rootSnapshotList
         snapshot_list = {}
 
         def func(snapshots):

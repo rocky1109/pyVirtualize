@@ -6,7 +6,7 @@ from codecs import open
 from setuptools import setup, find_packages
 
 
-VERSION = '0.1'
+VERSION = '0.10'
 
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)))

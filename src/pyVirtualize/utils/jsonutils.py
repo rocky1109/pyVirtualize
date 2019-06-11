@@ -1,6 +1,9 @@
 
 import json
-import urlparse
+try:
+    import urllib.parse as urlparse
+except:
+    import urlparse
 from datetime import datetime
 
 
