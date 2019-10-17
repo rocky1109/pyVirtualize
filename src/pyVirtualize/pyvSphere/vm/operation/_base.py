@@ -103,7 +103,7 @@ class BaseOperation(object):
             return False
 
         res = res[0]
-        return False if res.exitCode >= 0 else True
+        return False if isinstance(res.exitCode, int) and res.exitCode >= 0 else True
 
     def _get_auth(self, interactive=True, type_=None):
         if type_ is None:
