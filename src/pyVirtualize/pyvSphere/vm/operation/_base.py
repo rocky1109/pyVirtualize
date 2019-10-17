@@ -92,7 +92,7 @@ class BaseOperation(object):
         return self.vmomi_object.summary.config.guestFullName
 
     def _is_process_exists_in_gos(self, pid, creds):
-        pid = long(pid)
+        pid = int(pid)
         content = self.service_instance.RetrieveContent()
         pm = content.guestOperationsManager.processManager
         #creds = self._get_auth()
