@@ -111,7 +111,7 @@ class FileOperations(BaseOperation):
         else:
             self._upload_dir(src=src, dest=dest, credentials=credentials)
 
-    def _download_file(self, src, dest, credentials=None, overwirte=True):
+    def _download_file(self, src, dest, credentials=None, overwrite=True):
 
         file_manager = self.service_instance.content.guestOperationsManager.fileManager
 

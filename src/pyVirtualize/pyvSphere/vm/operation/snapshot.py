@@ -51,7 +51,7 @@ class SnapshotOperations(BaseOperation):
          Name of the snapshot.
         """
         snapshots = self._get_snapshot_list()
-        if not snapshots.has_key(name):
+        if name not in snapshots:
             raise ValueError("Snapshot '{0}' doesn't exists.".format(name))
         snapshot = snapshots.get(name)
         task_ = snapshot.RevertToSnapshot_Task()
